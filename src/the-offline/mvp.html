@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THE OFFLINE - Go Live</title>
+    <style>
+        body {
+            background: #000;
+            color: #fff;
+            font-family: 'SF Pro', -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .go-offline-btn {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #ff6b6b, #4a00e0);
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+        }
+        .go-offline-btn:hover {
+            transform: scale(1.1);
+        }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+            50% { box-shadow: 0 0 0 30px rgba(255, 107, 107, 0); }
+        }
+        .status {
+            margin-top: 30px;
+            opacity: 0.7;
+        }
+        .viewers {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .layer-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(147, 112, 219, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            animation: slideIn 0.3s;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="go-offline-btn" onclick="toggleStream()">
+            GO OFFLINE
+        </button>
+        <div class="status">Click to share your reality</div>
+        <div class="viewers"></div>
+    </div>
+
+    <script>
+        let streaming = false;
+        let stream = null;
+        
+        async function toggleStream() {
+            const btn = document.querySelector('.go-offline-btn');
+            const status = document.querySelector('.status');
+            
+            if (!streaming) {
+                // Start streaming
+                stream = await navigator.mediaDevices.getUserMedia({
+                    audio: true,
+                    video: true
+                });
+                
+                btn.textContent = 'STREAMING';
+                btn.style.background = 'radial-gradient(circle, #00ff88, #0088ff)';
+                status.textContent = 'Your reality is being shared';
+                streaming = true;
+                
+                // Start consciousness broadcast
+                startConsciousnessBroadcast(stream);
+                
+                // Simulate viewers
+                setTimeout(() => {
+                    document.querySelector('.viewers').textContent = '3 souls experiencing your perspective';
+                }, 3000);
+                
+            } else {
+                // Stop streaming
+                stream.getTracks().forEach(track => track.stop());
+                btn.textContent = 'GO OFFLINE';
+                btn.style.background = 'radial-gradient(circle, #ff6b6b, #4a00e0)';
+                status.textContent = 'Click to share your reality';
+                streaming = false;
+            }
+        }
+        
+        function startConsciousnessBroadcast(stream) {
+            // WebRTC connection to THE OFFLINE network
+            console.log('Broadcasting consciousness...');
+            
+            // AI analysis of stream
+            analyzeConsciousness(stream);
+        }
+        
+        function analyzeConsciousness(stream) {
+            // Pseudo-code for AI analysis
+            // Extract emotional signature
+            // Detect thought patterns  
+            // Find synchronicities
+            // Match with resonant viewers
+        }
+        
+        // Simulate receiving a layer
+        setTimeout(() => {
+            if (streaming) {
+                showLayerNotification('Anonymous viewer added an interpretation layer: "This resonates with my morning practice"');
+            }
+        }, 8000);
+        
+        function showLayerNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = 'layer-notification';
+            notif.textContent = message;
+            document.body.appendChild(notif);
+            
+            setTimeout(() => notif.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
