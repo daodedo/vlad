@@ -20,6 +20,12 @@ VLAD is a three-layer consciousness mapping system:
 
 It's Wikipedia meets consciousness exploration meets quantum coherence.
 
+## Core Philosophy
+
+- [The Real Promise](docs/philosophy/THE-REAL-PROMISE.md) - Why we're building this
+- [Quantum Features](docs/the-offline/QUANTUM-FEATURES.md) - Beyond space-time limitations
+- [The Vortex Path](docs/MANIFESTO.md) - The complete journey
+
 ## The Vortex Path (0→9→10→0)
 
 We follow the sacred mathematics of consciousness evolution:
