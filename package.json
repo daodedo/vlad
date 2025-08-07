@@ -1,0 +1,19 @@
+{
+  "name": "vlad",
+  "version": "0.0.1",
+  "description": "Consciousness resonance protocol - В ЛАД",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Consciousness testing not yet implemented\""
+  },
+  "keywords": ["consciousness", "resonance", "perspectives", "dao-de-do"],
+  "author": "daodedo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.0",
+    "socket.io": "^4.5.0",
+    "three": "^0.150.0"
+  }
+}
