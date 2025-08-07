@@ -1,0 +1,110 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VLAD - First Perspective</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-weight: 200;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            opacity: 0.8;
+            margin-bottom: 40px;
+        }
+        .question {
+            font-size: 24px;
+            margin: 30px 0;
+        }
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 150px;
+        }
+        textarea::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #667eea;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .perspectives {
+            margin-top: 50px;
+            text-align: left;
+        }
+        .perspective {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .author {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>В ЛАД</h1>
+        <div class="subtitle">Every perspective is a star in consciousness</div>
+        
+        <div class="question">What is reality?</div>
+        
+        <textarea placeholder="Share your perspective... How do YOU experience reality?"></textarea>
+        
+        <button onclick="sharePerspective()">Add to the Field</button>
+        
+        <div class="perspectives">
+            <div class="perspective">
+                <div class="author">Anonymous • 2 hours ago • 87% resonance</div>
+                Reality is the story consciousness tells itself to experience separation before remembering unity.
+            </div>
+            <div class="perspective">
+                <div class="author">Vlad • Yesterday • 92% resonance</div>
+                Reality is a collaborative dream where each dreamer adds their color to the shared canvas.
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function sharePerspective() {
+            alert('Your perspective is rippling through the field... (Demo mode - not yet connected to database)');
+        }
+    </script>
+</body>
+</html>
