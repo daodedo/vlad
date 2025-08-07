@@ -1,0 +1,26 @@
+{
+  "quest": "Discover Your Reality Creation Power",
+  "stages": [
+    {
+      "name": "The Mirror",
+      "objective": "Map your current perspective on 5 key concepts",
+      "vlad_action": "Submit perspectives on: Love, Money, Purpose, Time, Death",
+      "innernet_lesson": "Understanding your starting point",
+      "unlock": "Resonance matching activated"
+    },
+    {
+      "name": "The Prism", 
+      "objective": "Experience 10 radically different perspectives",
+      "vlad_action": "Read perspectives from 10 different paradigms",
+      "innernet_lesson": "Reality is negotiable",
+      "unlock": "Paradigm translation feature"
+    },
+    {
+      "name": "The Shift",
+      "objective": "Document your first reality shift",
+      "vlad_action": "Track synchronicities for 7 days",
+      "innernet_lesson": "You are the author",
+      "unlock": "Quantum field access"
+    }
+  ]
+}
